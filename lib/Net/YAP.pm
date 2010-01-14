@@ -1,6 +1,6 @@
 package Net::YAP;
 
-$VERSION = 0.1;
+$VERSION = 0.2;
 
 use strict;
 use base qw(Net::OAuth::Simple);
@@ -53,7 +53,7 @@ sub new {
 
 
 
-=head2 get_guid
+=head2 get_user_guid
 
 This method returns the guid of the Yahoo! user who has made a request to the
 YAP application.
@@ -61,7 +61,7 @@ YAP application.
 =cut
 
 
-sub get_guid {
+sub get_user_guid {
     my $self   = shift;
     my %params = @_;
     my $url    = URI->new('http://social.yahooapis.com/v1/me/guid');
@@ -72,7 +72,7 @@ sub get_guid {
 }
 
 
-=head2 get_profile
+=head2 get_user_profile
 
 This method returns the guid of the Yahoo! user who has made a request to the
 YAP application.
@@ -80,7 +80,7 @@ YAP application.
 =cut
 
 
-sub get_profile {
+sub get_user_profile {
     my $self   = shift;
     my $guid = shift;
     my %params = @_;
@@ -113,6 +113,8 @@ sub authorized {
     }
     return 1;
 }
+
+
 
 
 1;
