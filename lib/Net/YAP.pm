@@ -1,6 +1,6 @@
 package Net::YAP;
 
-$VERSION = 0.2;
+$VERSION = 0.3;
 
 use strict;
 use base qw(Net::OAuth::Simple);
@@ -13,7 +13,7 @@ our $ACC_URL  = "https://api.login.yahoo.com/oauth/v2/get_token";
 
 =head1 NAME
 
-Lokku::Net::YAP - Class used as a conduit to communicate with the Yahoo! 
+Net::YAP - Class used as a conduit to communicate with the Yahoo! 
 Application Platform
 
 =head1 FUNCTIONS
@@ -24,7 +24,7 @@ Application Platform
 
 =head2 new
 
-Creates a new Lokku::Net::YAP object. The following arguments must be passed
+Creates a new Net::YAP object. The following arguments must be passed
 to the constructor in order to ensure access is gained to the Yahoo! user's 
 details (location, age, etc).
 
