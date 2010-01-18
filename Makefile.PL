@@ -4,5 +4,5 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'		=> 'Net::YAP',
     'VERSION_FROM'	=> 'lib/Net/YAP.pm', # finds $VERSION
-    'PREREQ_PM'         => { 'Net::OAuth::Simple' => 1.2 },
+    'PREREQ_PM'         => { 'Net::OAuth::Simple' => 1.3 },
 );

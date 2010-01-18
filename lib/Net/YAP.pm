@@ -1,6 +1,6 @@
 package Net::YAP;
 
-$VERSION = 0.3;
+$VERSION = 0.4;
 
 use strict;
 use base qw(Net::OAuth::Simple);
@@ -13,7 +13,7 @@ our $ACC_URL  = "https://api.login.yahoo.com/oauth/v2/get_token";
 
 =head1 NAME
 
-Net::YAP - Class used as a conduit to communicate with the Yahoo! 
+Net::YAP - Module used as a conduit to communicate with the Yahoo! 
 Application Platform
 
 =head1 FUNCTIONS
@@ -92,27 +92,6 @@ sub get_user_profile {
     return $data->{profile};
 }
 
-
-=head2 authorized
-
-Whether the client has the necessary credentials to be authorized.
-
-Note that the credentials may be wrong and so the request may still fail.
-
-This method exists within Net::OAuth::Simple but has a bug and thus we 
-over-ride it here. The bug is that it returns true even if the access_*
-tokens are zero length.
-
-=cut
-
-sub authorized {
-    my $self = shift;
-    foreach my $param ( 'access_token', 'access_token_secret' ) {
-        return 0 unless( defined $self->{tokens}->{$param}
-            && length $self->{tokens}->{$param} );
-    }
-    return 1;
-}
 
 
 
