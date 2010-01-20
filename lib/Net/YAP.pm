@@ -1,6 +1,6 @@
 package Net::YAP;
 
-$VERSION = 0.4;
+$VERSION = 0.5;
 
 use strict;
 use base qw(Net::OAuth::Simple);
@@ -74,8 +74,10 @@ sub get_user_guid {
 
 =head2 get_user_profile
 
-This method returns the guid of the Yahoo! user who has made a request to the
-YAP application.
+This method returns the profile data of the Yahoo! user who has made a request
+to the YAP application.
+
+The data is returned as a hash reference.
 
 =cut
 
