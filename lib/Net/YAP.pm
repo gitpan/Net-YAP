@@ -1,6 +1,6 @@
 package Net::YAP;
 
-$VERSION = 0.5;
+$VERSION = 0.6;
 
 use strict;
 use base qw(Net::OAuth::Simple);
@@ -95,7 +95,18 @@ sub get_user_profile {
 }
 
 
+=head1 AUTHOR
 
+The code for this module is largely adapted from Simon Wistow's L<Net::FireEagle>.
+
+Rewritten and packaged by Alistair Francis <opensource@alizta.com>
+
+
+=head1 SEE ALSO
+
+L<Net::OAuth>, L<Net::OAuth::Simple> 
+
+=cut
 
 
 1;
